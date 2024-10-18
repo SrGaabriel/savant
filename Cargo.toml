@@ -1,0 +1,13 @@
+[package]
+name = "savant"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[workspace]
+members = [
+    "engine",
+    "host",
+    "embedded"
+]
