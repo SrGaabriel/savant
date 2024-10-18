@@ -1,11 +1,12 @@
-use clap::{Parser, Subcommand};
+use clap::{Parser, Subcommand, CommandFactory, Command};
+use clap_complete::Shell;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 pub struct Cli {
-    name: Option<String>,
+    pub name: Option<String>,
     #[command(subcommand)]
-    pub command: Option<Commands>
+    pub command: Option<Commands>,
 }
 
 #[derive(Subcommand, Debug)]

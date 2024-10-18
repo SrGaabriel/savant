@@ -7,6 +7,7 @@ pub fn handle_command(cli: Cli) {
                 println!("Changing directory to {}", path);
             }
             Commands::Exit => {
+                println!("Exiting...");
                 std::process::exit(0);
             }
             _ => {
