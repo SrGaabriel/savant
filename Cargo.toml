@@ -9,5 +9,7 @@ edition = "2021"
 members = [
     "engine",
     "host",
-    "embedded"
+    "embedded",
+    "macros",
+    "command"
 ]

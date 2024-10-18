@@ -1,5 +1,8 @@
+use std::any::Any;
 use clap::{Parser, Subcommand, CommandFactory, Command};
 use clap_complete::Shell;
+
+use crate::test::ExitCommand;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
