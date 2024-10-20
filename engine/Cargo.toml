@@ -7,3 +7,4 @@ edition = "2021"
 clap = { version = "4.5.20", features = ["derive"] }
 clap_complete = { version = "4.5.33" }
 savant-macros = { path="../macros" }
+command = { path="../command" }

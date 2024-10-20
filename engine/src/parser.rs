@@ -22,6 +22,7 @@ pub enum Commands {
 }
 
 pub fn parse_command(text: &String) -> Option<Cli> {
+    ExitCommand::nothing();
     let args = std::iter::once("savant").chain(text.split_whitespace()).collect::<Vec<_>>();
 
     Cli::try_parse_from(args)
