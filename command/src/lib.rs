@@ -11,34 +11,14 @@ pub struct Command {
 #[derive(Debug)]
 pub struct Argument {
     pub short: Option<String>,
-    pub long: String,
-    pub value_type: ArgumentType
+    pub long: String
 }
-
-#[derive(Debug)]
-pub enum ArgumentType {
-    String,
-    Boolean,
-    Int
-}
-
-impl ArgumentType {
-    pub fn name(&self) -> String {
-        match self {
-            Self::String => "String".to_string(),
-            Self::Boolean => "bool".to_string(),
-            Self::Int => "i32".to_string()
-        }
-    }
-}
-
 
 impl Argument {
-    pub fn new(simple_name: String, value_type: ArgumentType) -> Self {
+    pub fn new(simple_name: String) -> Self {
         Self {
             short: None,
-            long: simple_name,
-            value_type
+            long: simple_name
         }
     }
 }

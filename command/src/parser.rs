@@ -50,6 +50,17 @@ impl Parseable for bool {
     }
 }
 
+impl<T> Parseable for Option<T>
+    where T : Parseable
+{
+    fn parse(stream: &mut StringStream) -> ParsingResult<Self>
+    where
+        Self: Sized,
+    {
+        Ok(T::parse(stream).ok())
+    }
+}
+
 pub struct StringStream {
     pub data: Vec<String>,
     pub cursor: usize
